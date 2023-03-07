@@ -7,21 +7,27 @@ def realizarCadastroPremios():
       print("+" + "-----"*4 + "+")
       print(" CADASTRO DE PRÊMIOS ")
       print("+" + "-----"*4 + "+")
-      codProduto += 1
 
-      nome = input("Digite o produto a ser cadastrado como prêmio: ")
+      nome = input("Digite o produto a ser cadastrado como prêmio: ").capitalize()
 
-      tipo = input("Indique qual o tipo de produto a ser cadastrado como prêmio: ")
+      tipo = input("Indique qual o tipo de produto a ser cadastrado como prêmio: ").capitalize()
 
-      premios.append([codProduto, nome, tipo])
+      if nome != '' and tipo != '': # Verifica se ambos não são vazios
 
-      while True:
-        resposta = input("Deseja continuar a cadastrar prêmios (Sim/Não)? ").upper()
+        codProduto += 1
 
-        if resposta == 'SIM' or resposta == 'NÃO' or resposta == 'NAO':
-          break
-        else:
-          print("Resposta Inválida!")
+        premios.append([codProduto, nome, tipo])
+
+        while True:
+          resposta = input("Deseja continuar a cadastrar prêmios (Sim/Não)? ").upper()
+
+          if resposta == 'SIM' or resposta == 'NÃO' or resposta == 'NAO':
+            break
+          else:
+            print("Resposta Inválida!")
+      else:
+
+        print("NOME E/OU TIPO INVÁLIDO(S)! Repita o processo novamente")
 
   arquivo = open('files/premios.txt', 'w')
 

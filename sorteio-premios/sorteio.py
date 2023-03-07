@@ -10,7 +10,7 @@ premios = cadastro_premios.realizarCadastroPremios()
 
 while resposta == 'SIM':
     
-    if usuarios == [] or premios == []:
+    if usuarios == [] or premios == []:  # Verifica se as listas estão vazias
        print("Não há mais usuários ou prêmios para sortear!")
        break
     
