@@ -1,12 +1,11 @@
-import cadastro_pessoas
-import cadastro_premios
-import envio_gmail
-import random
+from cadastro_pessoas import realizarCadastroPessoas
+from cadastro_premios import realizarCadastroPremios
+import envio_gmail, random
 
 sorteios = []
 resposta = 'SIM'
-usuarios = cadastro_pessoas.realizarCadastroPessoas()
-premios = cadastro_premios.realizarCadastroPremios()
+usuarios = realizarCadastroPessoas()
+premios = realizarCadastroPremios()
 
 while resposta == 'SIM':
     

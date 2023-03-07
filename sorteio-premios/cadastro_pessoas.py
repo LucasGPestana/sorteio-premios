@@ -31,6 +31,7 @@ def realizarCadastroPessoas():
           continue
       else:
          print("NOME INVÁLIDO! Repita o processo novamente!")
+         continue
 
   arquivo = open("files/usuarios.txt", "w")
 

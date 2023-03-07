@@ -26,8 +26,8 @@ def realizarCadastroPremios():
           else:
             print("Resposta Inválida!")
       else:
-
         print("NOME E/OU TIPO INVÁLIDO(S)! Repita o processo novamente")
+        continue
 
   arquivo = open('files/premios.txt', 'w')
 
