@@ -3,7 +3,7 @@ def enviarEmail(nome, destinatario_email, premio, tipo_premio):
   import smtplib
   import email.message
 
-  PASSWORD = 'wmbhbpjhmrfkjsbe' # Digite aqui a senha temporária de quem mandará o email
+  PASSWORD = '' # Digite aqui a senha temporária de quem mandará o email
 
   corpo_texto = f"""
   
@@ -14,7 +14,7 @@ def enviarEmail(nome, destinatario_email, premio, tipo_premio):
 
   msg = email.message.Message()
   msg['Subject'] = f'Congratulações, {nome}'
-  msg['From'] = 'testandoemailempython@gmail.com' # Digite aqui o email de quem mandará o email
+  msg['From'] = '' # Digite aqui o email de quem mandará o email
   msg['To'] = destinatario_email
   msg.add_header('Content-Type', 'text/html')
   msg.set_payload(corpo_texto)
